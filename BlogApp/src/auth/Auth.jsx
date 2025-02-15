@@ -5,7 +5,7 @@ class Auth {
     // make an api call to save the data
     try {
       await axios({
-        url: "https://node-auth-jwt-w78c.onrender.com/signup",
+        url: "https://node-auth-jwt-w78c.onrender.com/auth/signup",
         method: "POST",
         data: signupInfo,
       });
@@ -20,7 +20,7 @@ class Auth {
   async loginUser(credentials) {
     try {
       const response = await axios({
-        url: "http://localhost:5173/login",
+        url: "https://node-auth-jwt-w78c.onrender.com/auth/login",
         method: "POST",
         data: credentials,
       });
