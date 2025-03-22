@@ -9,20 +9,16 @@ import PostList from "./pages/PostList";
 
 const App = () => {
 
-
-
-
-
   return (
     <div className="px-4 md:px-8" >
       <Navbar />
       <Routes>
 
         <Route path='/' element={<Home />} />
-        <Route path="/posts" />
-        <Route path="/:" element={<PostList />} />
+        <Route path="/posts" element={<PostList />} />
+        <Route path="/:userId" element={<PostList />} />
         <Route path='/signup' element={<Signup />} />
-        <Route path='/login' element={<Login />} /> 
+        <Route path='/login' element={<Login />} />
 
 
       </Routes>
@@ -30,4 +26,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App; 

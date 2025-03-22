@@ -1,3 +1,4 @@
+import { SignIn } from "@clerk/clerk-react";
 import { Link, Navigate } from "react-router-dom";
 
 const Login = () => {
@@ -18,7 +19,7 @@ const Login = () => {
           <p className="text-gray-400">
             Dont have an account? <Link to="/signup" className="text-purple-400">Register</Link>
           </p>
-          <form className="space-y-4">
+          {/* <form className="space-y-4">
             {/* <div className="flex gap-4">
               <input
                 type="text"
@@ -30,7 +31,7 @@ const Login = () => {
                 placeholder="Last name"
                 className="w-1/2 bg-gray-800 p-3 rounded-lg border border-gray-600 focus:ring-2 focus:ring-purple-500 outline-none"
               />
-            </div> */}
+            </div> }
             <input
               type="email"
               placeholder="Email"
@@ -52,20 +53,14 @@ const Login = () => {
             <button className="w-full bg-purple-600 p-3 rounded-lg hover:bg-purple-700 transition">
               Login 
             </button>
-          </form>
+          </form> */}
           <div className="flex items-center gap-2 text-gray-400 my-4">
             <hr className="flex-grow border-gray-600" />
             <span>Or Login with</span>
             <hr className="flex-grow border-gray-600" />
           </div>
-          <div className="flex gap-4">
-            <button className="flex items-center gap-2 bg-gray-800 p-3 rounded-lg w-1/2 hover:bg-gray-700 transition">
-              <img src="/google-icon.svg" alt="Google" className="w-5 h-5" /> Google
-            </button>
-            <button className="flex items-center gap-2 bg-gray-800 p-3 rounded-lg w-1/2 hover:bg-gray-700 transition">
-              <img src="/apple-icon.svg" alt="Apple" className="w-5 h-5" /> Apple
-            </button>
-          </div>
+         
+        <SignIn  signUpUrl="/signup" />
         </div>
       </div>
     </div>

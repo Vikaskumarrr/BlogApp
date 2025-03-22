@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
-
 body{ 
   background-color: #e6e6ff;
   width: 100%;
   /* font-family: "Montserrat", sans-serif; */
+}
+
+.animateButton{ 
+  animation-duration: 10000ms;
 }
